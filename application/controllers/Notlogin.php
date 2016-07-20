@@ -30,10 +30,10 @@ Class Notlogin extends CI_Controller{
             $data['openid']=$openid;
         }
         echo $openid;
-//        $this->load->helper("tools");
-//        $tools=new Tools();
-//        $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
-//        $loginresult=$tools->httpget($url);
-//        header('location:'.$loginresult);
+        $this->load->helper("tools");
+        $tools=new Tools();
+        $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
+        $loginresult=$tools->httpget($url);
+        header('location:'.$loginresult);
     }
 }
