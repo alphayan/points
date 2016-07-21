@@ -36,7 +36,7 @@ Class Notlogin extends CI_Controller{
             $loginresult=$tools->httpget($url);
             header('Location:'.$loginresult);
         }else{
-            echo $openid;
+            echo "暂无积分，请联系微开科技管理人员";
         }
 
     }
