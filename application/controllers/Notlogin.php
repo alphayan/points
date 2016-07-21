@@ -29,13 +29,12 @@ Class Notlogin extends CI_Controller{
         }else{
             $data['openid']=$openid;
         }
-       
         if ($openid!=""){
             $this->load->helper("tools");
             $tools=new Tools();
             $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
             $loginresult=$tools->httpget($url);
-            header('location:'.$loginresult);
+            header('Location:'.$loginresult);
         }else{
             echo $openid;
         }
