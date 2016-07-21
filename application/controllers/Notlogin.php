@@ -29,7 +29,8 @@ Class Notlogin extends CI_Controller{
         }else{
             $data['openid']=$openid;
         }
-        if ($openid!=""){
+        log_message("info",$openid);
+        if ($openid!=null){
             $this->load->helper("tools");
             $tools=new Tools();
             $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
