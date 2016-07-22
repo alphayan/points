@@ -34,6 +34,7 @@ Class Notlogin extends CI_Controller{
             $this->load->helper("tools");
             $tools=new Tools();
             $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
+            log_message("info",$url."url地址为这个。");
             $loginresult=$tools->httpget($url);
             header('Location:'.$loginresult);
         }else{
