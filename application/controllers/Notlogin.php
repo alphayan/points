@@ -36,6 +36,7 @@ Class Notlogin extends CI_Controller{
             $url="http://".$this->config->item('serverip')."/notlogin?openid=".$openid;
             log_message("info",$url."url地址为这个。");
             $loginresult=$tools->httpget($url);
+            log_message("info",$loginresult."登录结果为这个。");
             header('Location:'.$loginresult);
         }else{
             echo "暂无积分，请联系微开科技管理人员";
