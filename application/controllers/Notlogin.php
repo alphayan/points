@@ -29,7 +29,7 @@ Class Notlogin extends CI_Controller{
         }else{
             $data['openid']=$openid;
         }
-        log_message("info",$openid);
+        log_message("info",$openid."为这个。");
         if ($openid!=null){
             $this->load->helper("tools");
             $tools=new Tools();
